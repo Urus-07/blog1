@@ -1,0 +1,240 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+font-family: Adorable;
+background-color:;
+}
+h1{
+color: black;
+
+}
+.text{
+color: #000000;
+}
+.img-fel{
+width: 200px;
+height: 300px;
+}
+.popup-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+border: 1px solid #ccc;
+padding: 10px;
+width: 200px;
+text-align: center;
+border-radius: 5px;
+z-index: 1;
+}
+.image-with-text {
+position: relative;
+display: inline-block;
+}
+.image-with-text img {
+display: block;
+width: 100%;
+height: auto;
+}
+.image-with-text .overlay {
+position: absolute;
+top: 60%;
+left: 35%;
+transform: translate(-50%, -50%);
+background-color: rgba(0, 0, 0, 0.5);
+padding: 20px;
+color: #fff;
+font-size: 50px;
+text-align: left;
+}
+.navbar {
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+}
+
+.navbar a.active,.navbar a.clicked {
+  background-color: green;
+  color: white;
+}
+</style>
+
+<script>
+function showPopup() {
+var popup = document.getElementById("popup");
+popup.style.display = "block";
+}
+
+function hidePopup() {
+var popup = document.getElementById("popup");
+popup.style.display = "none";
+}
+
+window.addEventListener("DOMContentLoaded", function() {
+  var currentPage = window.location.href.split("/").pop();
+  var links = document.getElementsByClassName("navbar")[0].getElementsByTagName("a");
+  for (var i = 0; i < links.length; i++) {
+    links[i].classList.remove("active");
+    if (links[i].getAttribute("href") == currentPage) {
+      links[i].classList.add("active");
+    }
+  }
+});
+
+function handleClick(el) {
+  var links = document.getElementsByClassName("navbar")[0].getElementsByTagName("a");
+  for (var i = 0; i < links.length; i++) {
+    links[i].classList.remove("clicked");
+  }
+  el.classList.add("clicked");
+}
+</script>
+
+</head>
+<body>
+<p align="right"><a href="salir.php"><img src="Salir.jpg" alt="Salir del sistema" title="Salir"></a></p>
+<center><table border="1" width="90%" height="10%" bgcolor="#E6AF47">
+<tr>
+<td colspan="4"><h3><center><h1>DEPRESION</h1></center></h3></td>
+</tr>
+</table></center>
+<br><center>
+<div class="navbar">
+    <a href="index.html" onclick="handleClick(this)">Inicio</a>
+    <a href="blog1.html" onclick="handleClick(this)">CARACTERISTICAS DE LA DEPRESIÓN</a>
+    <a href="blog2.html" onclick="handleClick(this)">TIPOS DE DEPRESIÓN</a>
+    <a href="blog3.html" onclick="handleClick(this)">CAUSAS DE LA DEPRESIÓN</a>
+    <a href="blog4.html" onclick="handleClick(this)">TRATAMIENTO</a>
+  </div>
+</center>
+
+<br>
+ 
+<center><table border="1" width="80%" height="10%">
+<tr>
+<td onmouseover="showPopup()" onmouseout="hidePopup()"><center>"4°C"
+<div class="popup-content" id="popup">
+Alondra Cordero Gonzales<br> Omar Mejia Garcia <br> Alfonso Pluma Arenas <br> Ariadna Jaqueline Sanchez Juarez
+</div>
+</center></td>
+<td><center>Programacion</center></td>
+<td><center><a href="https://cecytlax.edu.mx/cecyte-23-texcalac/">COLEGIO DE ESTUDIOS CIENTIFICOS Y TECNOLOGICOS 23 TEXCALAC </a></center></td>
+</tr>
+</table></center>
+
+<center>
+<table border="1">
+<tr+
+<td colspan="2"><center>
+<div class="image-with-text">
+<img src="FELIZ.jpg" class="img-fel" alt="Un imagen feliz">
+<div class="overlay">
+      "No dejes que la depresion escriba tu historia.<br>Eres el autor y puedes elegir como se desarrolla el siguiente capitulo"
+</div>
+</div>
+</td>
+</tr>
+</table>
+</center>
+<br><BR>
+
+<center><table border="1" width="90%" height="50%" bgcolor="#E6AF47">
+<tr><td><BR>
+<font size="18"><center><i>INFORMACION</i></center></font><p align="justify" class="text">
+</td></tr>
+</table></center>
+<br><BR>
+<table border="1">
+<tr><td>
+<font size="6">
+La depresión es una enfermedad común pero grave que interfiere con la vida diaria, con la capacidad para trabajar, dormir, estudiar, comer y disfrutar de la vida. La depresión es causada por una combinación de factores genéticos, biológicos, ambientales y psicológicos.<br><BR>
+
+Algunas investigaciones indican que el riesgo genético para la depresión es el resultado de la influencia de varios genes que actúan junto con factores ambientales y otros factores de riesgo.<br><BR>
+
+Algunos tipos de depresión tienden a darse en familias. Sin embargo, la depresión también puede ocurrir en personas sin antecedentes familiares de depresión. No todas las personas con enfermedades depresivas experimentan los mismos síntomas. La gravedad, frecuencia y duración de los síntomas varían dependiendo de la persona y su enfermedad en particular.<br><BR>
+</tr></td>
+</font>
+</table>
+<br><BR>
+
+<center>
+<table border="1" bgcolor="#E6AF47">
+<tr><td>
+<font size="18"><b><center>Datos clave</center></b></font><br><BR>
+</td></tr>
+</table>
+</center>
+
+<br><BR>
+
+<center>
+<table border="1">
+<tr><td>
+<font size="6">
+-La depresión  es una enfermedad que se caracteriza por una tristeza persistente y por la pérdida de interés en las actividades con las que normalmente se disfruta, así como por la incapacidad para llevar a cabo las actividades cotidianas, durante al menos dos semanas.<br><br>
+-Las personas con depresión suelen presentar varios de los siguientes síntomas: pérdida de energía; cambios en el apetito; necesidad de dormir más o menos de lo normal; ansiedad; disminución de la concentración; indecisión; inquietud; sentimiento de inutilidad, culpabilidad o desesperanza; y pensamientos de autolesión o suicidio.<br>
+-La depresión no es un signo de debilidad. Se puede tratar con terapia o intervención psicológica, con medicación antidepresiva o con una combinación de ambos métodos.<br><br>
+-Las personas expuestas a violencia frecuentemente experimentan una variedad de reacciones que incluye: ansiedad, estrés, frustración, temor, irritabilidad, enojo, dificultad de concentrarse, pérdida del apetito y pesadillas.<br>
+Hoja informativa</p>
+</font>
+</tr></td>
+</table>
+</center>
+
+<br><BR>
+
+<center>
+<table border="1" bgcolor="#E6AF47">
+<tr><td>
+<center><b><font size="18">Prueba de depresión</font></b><br><br><br><BR>
+</td><t/tr>
+</table>
+</center>
+
+<br><br>
+
+<center>
+<table border="1">
+<tr><td>
+<font size="6">No hay una prueba específica para diagnosticar la depresión. Pero tu proveedor de salud puede hacer un diagnóstico basado en tus síntomas y una evaluación psicológica.
+En la mayoría de los casos, te harán una serie de preguntas sobre tu(s):<br>
+<p align="center">•estados de ánimo<br>
+•apetito<br>
+•patrón del sueño<br>
+•nivel de actividad<br>
+•pensamientos<br><br>
+Debido a que la depresión puede estar relacionada con otros problemas médicos, tu proveedor de salud también puede realizar un examen físico y ordenar análisis de sangre. A veces, los problemas de tiroides o una deficiencia de vitamina D pueden desencadenar síntomas de depresión.<br>
+No ignores los síntomas de la depresión. Si tu estado de ánimo no mejora o empeora, busca ayuda médica. La depresión es una enfermedad mental grave con el potencial de complicaciones.<br>
+Si no se trata, las complicaciones pueden incluir:<br>
+<p align="center">•aumento o pérdida de peso<br>
+•dolor físico<br>
+•problemas de adicción<br>
+•ataques de pánico<br>
+•problemas en las relaciones<br>
+•aislamiento social<br>
+•pensamientos suicidas<br>
+•autolesiones</p>
+<br><br></font>
+</center>
+</tr></td>
+<tr>
+<td colspan="2">info</td>
+</tr>
+</table>
+</center>
+
+</body>
+<html>
